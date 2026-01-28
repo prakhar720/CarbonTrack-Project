@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Carbon Track</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">CarbonTrack</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- REGISTER CARD -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Create Account</h2>
+
+            <input type="text" id="orgName" placeholder="Company / Organization Name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <select id="role">
+                <option value="">Select Role</option>
+                <option value="company">Company</option>
+                <option value="auditor">Auditor</option>
+                <option value="government">Government</option>
+            </select>
+
+            <button id="registerBtn" class="btn primary">Register</button>
+
+            <p class="auth-text">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script type="module" src="js/auth-register.js"></script>
+</body>
+</html>

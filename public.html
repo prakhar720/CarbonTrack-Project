@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Public Dashboard | CarbonTrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">CarbonTrack</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="dashboard-container">
+    <h1>Public Emission Transparency Dashboard</h1>
+    <p class="subtitle">
+      View verified carbon emission reports submitted by companies
+    </p>
+
+    <div class="table-container">
+      <table id="publicTable">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Month</th>
+            <th>Total Emission (kg CO₂)</th>
+            <th>Status</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script type="module" src="js/public.js"></script>
+</body>
+</html>

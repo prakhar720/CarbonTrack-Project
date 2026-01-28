@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Carbon Track</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">CarbonTrack</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- LOGIN CARD -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2>Login</h2>
+
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <select id="role">
+                <option value="">Select Role</option>
+                <option value="company">Company</option>
+                <option value="auditor">Auditor</option>
+                <option value="government">Government</option>
+            </select>
+
+            <button id="loginBtn" class="btn primary">Login</button>
+
+
+            <p class="auth-text">
+                Don’t have an account?
+                <a href="register.html">Register here</a>
+            </p>
+        </div>
+    </div>
+<script type="module" src="js/auth-login.js"></script>
+
+</body>
+</html>

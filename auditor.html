@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auditor Dashboard | CarbonTrack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- CryptoJS (for future hash verification, already available) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">CarbonTrack</div>
+    <ul class="nav-links">
+      <li><a href="#">Auditor Dashboard</a></li>
+      <li><button id="logoutBtn" class="btn">Logout</button></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-container">
+
+    <h1>Pending Emission Reports</h1>
+    <p class="subtitle">
+      Review and verify company-submitted emission reports
+    </p>
+
+    <!-- REPORTS TABLE -->
+    <div class="table-container">
+      <table id="reportsTable">
+        <thead>
+          <tr>
+            <th>Company ID</th>
+            <th>Month</th>
+            <th>Total Emission (kg CO₂)</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows injected by JS -->
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- PROTECTION & LOGOUT -->
+  <script type="module" src="js/protect.js"></script>
+  <script type="module" src="js/logout.js"></script>
+
+  <!-- AUDITOR LOGIC -->
+  <script type="module" src="js/auditor.js"></script>
+
+</body>
+</html>

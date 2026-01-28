@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">CarbonTrack</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><button id="logoutBtn">Logout</button></li>
+            
+        </ul>
+        
+
+    </nav>
+    <!--maincontent -->
+    <main class="dashboard">
+        <!--Welcome dashboard -->
+        <section class="welcome">
+        <h1>Welcome,<span id="companyName">Company Name</span> </h1>
+        <p>Your carbon emission overview and compilance status</p>
+        </section>
+        <!--Stats Cards-->
+        <section class="stats">
+            <div class="card">
+                <h3>Total Emissions</h3>
+                <p class="value">-- tCO₂</p>
+            </div>
+
+            <div class="card">
+                <h3>Last Submission</h3>
+                <p class="value">Not Submitted</p>
+            </div>
+
+            <div class="card">
+                <h3>Verification Status</h3>
+                <p class="value pending">Pending</p>
+            </div>
+        </section>
+        
+        <!-- PRIMARY ACTION -->
+        <section class="action">
+           <button id="openFormBtn" class="primary-btn">
+  Submit Monthly Emission Report
+</button>
+<section class="report-form hidden" id="reportFormSection">
+
+  <h2>Submit Monthly Emission Report</h2>
+
+  <form id="emissionForm" class="emission-grid">
+
+    <!-- Month -->
+    <div class="form-group full">
+      <label>Reporting Month</label>
+      <input type="month" id="month" required>
+    </div>
+
+    <!-- Electricity -->
+    <div class="form-group">
+      <label>Electricity (kWh)</label>
+      <input type="number" id="electricity" placeholder="e.g. 1200" required>
+      <input type="file" id="electricityEvidence" accept=".pdf,image/*">
+      <small>Upload electricity bill</small>
+    </div>
+
+    <!-- Fuel -->
+    <div class="form-group">
+      <label>Fuel (litres)</label>
+      <input type="number" id="fuel" placeholder="e.g. 500" required>
+      <input type="file" id="fuelEvidence" accept=".pdf,image/*">
+      <small>Upload fuel invoice</small>
+    </div>
+
+    <!-- Transport -->
+    <div class="form-group">
+      <label>Transport Emissions (kg CO₂)</label>
+      <input type="number" id="transport" placeholder="e.g. 300" required>
+      <input type="file" id="transportEvidence" accept=".pdf,image/*">
+      <small>Upload transport proof</small>
+    </div>
+
+    <!-- Waste -->
+    <div class="form-group">
+      <label>Waste Emissions (kg CO₂)</label>
+      <input type="number" id="waste" placeholder="e.g. 150" required>
+      <input type="file" id="wasteEvidence" accept=".pdf,image/*">
+      <small>Upload waste document</small>
+    </div>
+
+    <!-- Submit -->
+    <div class="form-group full">
+      <button type="submit" class="primary-btn">
+        Submit Report
+      </button>
+    </div>
+
+  </form>
+
+</section>
+
+    
+
+
+
+
+
+        </section>
+         <!-- RECENT REPORTS -->
+        <section class="reports">
+            <h2>Recent Reports</h2>
+
+            <table id="companyReportsTable">
+                <thead>
+                    <tr>
+                        <th>Month</th>
+                        <th>Total Emission</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                        <th>Submission Hash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+             </section>
+    </main>
+    <script src="js/report-form-toggle.js"></script>
+    <script type="module" src="js/company-report.js"></script>
+    <script type="module" src="js/company-history.js"></script>
+    <script type="module" src="js/company-summary.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/company-charts.js"></script>
+    <script type="module" src="js/protect.js"></script>
+    <script type="module" src="js/logout.js"></script>
+
+</body>
+</html>
