@@ -127,11 +127,7 @@ CarbonTrack/
     ├── auditor.js
     └── public.js
 
-🔧 Setup Instructions
-
-Clone the repository:
-
-git clone https://github.com/yourusername/carbontrack.git
+ Setup Instructions
 
 
 Create a Firebase project
