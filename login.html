@@ -22,26 +22,49 @@
         <div class="auth-card">
             <h2>Login</h2>
 
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="password" placeholder="Password">
+            <!-- ✅ ADD FORM -->
+            <form id="loginForm">
 
-            <select id="role">
-                <option value="">Select Role</option>
-                <option value="company">Company</option>
-                <option value="auditor">Auditor</option>
-                <option value="government">Government</option>
-            </select>
+                <input type="email" id="email" placeholder="Email" required>
 
-            <button id="loginBtn" class="btn primary">Login</button>
+                <input type="password" id="password" placeholder="Password" required>
 
+                <!-- Optional: you actually don't need role during login,
+                     but keeping it if you want -->
+                <select id="role">
+                    <option value="">Select Role</option>
+                    <option value="company">Company</option>
+                    <option value="auditor">Auditor</option>
+                    <option value="government">Government</option>
+                </select>
+
+                <!-- ✅ Important: type="submit" -->
+                <button type="submit" class="btn primary">
+                    Login
+                </button>
+
+            </form>
+
+            <hr />
+
+            <!-- MetaMask Login -->
+            <button id="metamaskLogin" class="btn secondary">
+                Login with Metamask
+            </button>
 
             <p class="auth-text">
                 Don’t have an account?
                 <a href="register.html">Register here</a>
             </p>
+
         </div>
     </div>
-<script type="module" src="js/auth-login.js"></script>
+
+    <!-- Ethers (global) -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+
+    <!-- Login JS -->
+    <script type="module" src="js/auth-login.js"></script>
 
 </body>
 </html>
