@@ -62,7 +62,7 @@ Creates an append-only hash chain
 
 Prevents silent data tampering
 
-🛠 Tech Stack
+Tech Stack
 Frontend
 
 HTML
